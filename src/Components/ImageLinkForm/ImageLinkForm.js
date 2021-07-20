@@ -1,6 +1,7 @@
 import React from 'react';
+import './ImageLinkForm.css'
 
-const Footer = () => { //Note that onInputCHange is used as an onChange event in the input box below
+const ImageLinkForm = ({ onInputChange, onButtonSubmit }, ) => { //Note that onInputCHange is used as an onChange event in the input box below
     return (
         <div>
            <p className= 'f3'> 
@@ -16,4 +17,4 @@ const Footer = () => { //Note that onInputCHange is used as an onChange event in
     )
 }
 
-export default Footer;
+export default ImageLinkForm;
