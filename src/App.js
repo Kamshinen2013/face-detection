@@ -34,7 +34,7 @@ class App extends Component {
     super();
     this.state = {
       input:'',  //This is where users can input their link
-      imageurl: ''
+      imageurl: '',
     }
   }
 
@@ -47,7 +47,7 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({imageurl: this.state.input}); //onButtonSubmit, we want the image url to be what is contained in the input
     //the imageurl is later passed into the face recognition box
-    app.models.predict(Clarifai.COLOR_MODEL, "https://samples.clarifai.com/face-det.jpg")
+    app.models.predict(Clarifai.COLOR_MODEL, this.state.input) //this.state.input is whatever is contained in the input box
     .then(
     function(response){
       //do something with response
